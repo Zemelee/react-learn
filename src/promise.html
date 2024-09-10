@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    setTimeout(() => {
+        console.log("2000-1");
+    }, 2000) //2秒后输出
+    setTimeout(() => {
+        console.log("1000-1");
+    }, 1000); //1s后输出
+    ///
+    submit()
+    async function submit() {
+        await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("3000-2");
+            }, 3000) //3s后输出
+            resolve()
+        })
+        await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("1000-2");
+            }, 1000) //4s后输出
+        })
+    }
+
+
+</script>
+
+</html>
